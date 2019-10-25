@@ -31,5 +31,12 @@
                 })
                 .catch(err => console.error(err));
         }
+
+        onDelete(id: number, key: number) {
+            window.axios.delete('/api/topics/' + id)
+                .then(() => {
+                    this.$delete(this.items, key);
+                })
+        }
     }
 </script>
