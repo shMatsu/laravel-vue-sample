@@ -2,6 +2,7 @@ import Vue from 'vue';
 import bootstrap from './bootstrap';
 import SampleComponent from './components/Sample.vue';
 import ListComponent from './components/topic/List.vue';
+import CreateComponent from './components/topic/Form.vue';
 import NavbarComponent from './components/Navbar.vue';
 
 bootstrap();
@@ -12,8 +13,8 @@ Vue.use(VueRouter); // Vue.jsで、Vue Routerを使うように設定
 // vue-routerによるルーティング設定
 const routes: RouteConfig[] = [
   { path: '/', component: SampleComponent, name: 'sample' },
-  { path: '/topic/list', component: ListComponent, name: 'topicList' }, // ルートでアクセスしたら、List.vueを表示
-  // { path: '/create', component: require('./components/Form.vue'), name: 'create' }, // createにアクセスしたらForm.vueを表示
+  { path: '/topic/list', component: ListComponent, name: 'topicList' },
+  { path: '/topic/create', component: CreateComponent, name: 'create' },
   // { path: '/:id', component: require('./components/Detail.vue'), name: 'detail' }, // id番号でアクセスしたらDetail.vueを表示
 ];
 const router = new VueRouter({

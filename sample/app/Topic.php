@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
-    public function toArray($request){
+    public function toArray(){
         return [
           'id' => $this->id,
           'title' => $this->title,
